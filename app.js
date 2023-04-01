@@ -15,6 +15,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //-------------------------------------------------------------
 
+app.use(express.static("public"));
+
+//-------------------------------------------------------------
+
 app.get("/", function (req, res) {
   let today = new Date();
   let options = {
